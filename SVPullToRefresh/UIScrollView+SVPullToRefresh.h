@@ -29,7 +29,6 @@ typedef NS_ENUM(NSUInteger, SVPullToRefreshPosition) {
 
 @end
 
-
 typedef NS_ENUM(NSUInteger, SVPullToRefreshState) {
     SVPullToRefreshStateStopped = 0,
     SVPullToRefreshStateTriggered,
@@ -60,6 +59,8 @@ typedef NS_ENUM(NSUInteger, SVPullToRefreshState) {
 @property (nonatomic, strong, readonly) UILabel *dateLabel DEPRECATED_ATTRIBUTE;
 @property (nonatomic, strong) NSDate *lastUpdatedDate DEPRECATED_ATTRIBUTE;
 @property (nonatomic, strong) NSDateFormatter *dateFormatter DEPRECATED_ATTRIBUTE;
+@property (assign, readwrite, nonatomic) CGFloat customOffsetThreshold;
+@property (assign, readwrite, nonatomic) CGFloat yOrigin;
 
 // deprecated; use [self.scrollView triggerPullToRefresh] instead
 - (void)triggerRefresh DEPRECATED_ATTRIBUTE;
