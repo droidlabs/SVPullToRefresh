@@ -387,8 +387,6 @@ static char UIScrollViewPullToRefreshView;
         break;
     }
     self.frame = CGRectMake(0, yOrigin, self.bounds.size.width, SVPullToRefreshViewHeight);
-    NSLog(@"bounds %.f %.f",self.scrollView.frame.origin.y,self.scrollView.frame.size.height);
-    self.backgroundColor = [UIColor redColor];
   }
   else if([keyPath isEqualToString:@"frame"])
     [self layoutSubviews];
