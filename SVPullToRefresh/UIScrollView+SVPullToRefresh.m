@@ -124,7 +124,6 @@ static char UIScrollViewPullToRefreshView;
             [self removeObserver:self.pullToRefreshView forKeyPath:@"frame"];
             [self.pullToRefreshView resetScrollViewContentInset];
             self.pullToRefreshView.isObserving = NO;
-        }
     }
     else {
         if (!self.pullToRefreshView.isObserving) {
