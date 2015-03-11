@@ -90,10 +90,13 @@ static char UIScrollViewPullToRefreshView;
     view.position = position;
     self.pullToRefreshView = view;
     self.showsPullToRefresh = YES;
-    
-    
+     
   }
-  
+}
+
+- (void)resetPullToRefreshOriginalInset {
+  self.pullToRefreshView.originalTopInset = self.contentInset.top;
+  self.pullToRefreshView.originalBottomInset = self.contentInset.bottom;
 }
 
 - (void)addPullToRefreshWithActionHandler:(void (^)(void))actionHandler {
